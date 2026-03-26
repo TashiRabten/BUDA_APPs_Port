@@ -6,14 +6,14 @@
   <title>BUDA Apps Portfolio</title>
   <style>
     :root {
-      --bg: #2a0f14;
-      --panel: #3a151d;
-      --panel-2: #4a1d28;
-      --text: #fff4e8;
-      --muted: #f1d8bf;
-      --accent: #f4b860;
-      --border: #8b4b39;
-      --shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+      --bg: #0b1020;
+      --panel: #121933;
+      --panel-2: #1a2345;
+      --text: #edf2ff;
+      --muted: #b9c3e6;
+      --accent: #8eb2ff;
+      --border: #2c3f82;
+      --shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
     }
 
     * { box-sizing: border-box; }
@@ -21,7 +21,7 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, var(--bg), #1c0a0f);
+      background: linear-gradient(180deg, var(--bg), #0f1730);
       color: var(--text);
       line-height: 1.55;
     }
@@ -68,7 +68,7 @@
       padding: 6px 10px;
       font-size: 0.9rem;
       color: var(--muted);
-      background: rgba(108, 46, 33, 0.5);
+      background: rgba(20, 34, 80, 0.55);
     }
 
     .grid {
@@ -79,14 +79,6 @@
     }
 
     .card { padding: 18px; }
-
-    .screenshot {
-      display: block;
-      width: 100%;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      margin: 12px 0 14px;
-    }
 
     ul { padding-left: 20px; }
 
@@ -105,12 +97,14 @@
       padding: 9px 12px;
       font-weight: bold;
       color: var(--text);
-      background: #6f372b;
+      background: #1a2856;
     }
 
     .contact {
       padding: 22px;
     }
+
+    .small { font-size: 0.92rem; }
   </style>
 </head>
 <body>
@@ -118,7 +112,7 @@
     <section class="hero">
       <h1>BUDA Apps Portfolio</h1>
       <p class="subtitle">
-        Public portfolio page highlighting BUDA applications through project summaries, feature lists, and demo videos.
+        Public portfolio page for recruiter review. This site highlights private-source applications with project summaries, feature lists, and demo videos.
       </p>
       <p class="muted">
         Source code is intentionally private due to proprietary and copyright considerations.
@@ -127,7 +121,7 @@
         <span class="chip">Private repositories</span>
         <span class="chip">Public demos</span>
         <span class="chip">Feature overviews</span>
-        <span class="chip">Project highlights</span>
+        <span class="chip">Recruiter-friendly format</span>
       </div>
     </section>
 
@@ -138,7 +132,6 @@
         <p class="muted">
           Java-based Tibetan translation and text-processing application focused on Buddhist terminology workflows.
         </p>
-        <img class="screenshot" src="file:///C:/Users/tashi.TASHI-LENOVO/OneDrive/Pictures/Screenshots/Screenshot%202026-03-26%20165924.png" alt="TradutorBUDA application screenshot" />
         <p><strong>Tech stack:</strong> Java 17, Maven, SQLite, ONNX Runtime, tokenizers, R/Rserve, OCR utilities.</p>
         <ul>
           <li>Tibetan term lookup and processing workflows</li>
@@ -156,7 +149,6 @@
         <p class="muted">
           Simplified glossary application retaining the core term management features without experimental OCR integration.
         </p>
-        <img class="screenshot" src="file:///C:/Users/tashi.TASHI-LENOVO/OneDrive/Pictures/Screenshots/Screenshot%202026-03-26%20165948.png" alt="GlossarioBUDA application screenshot" />
         <p><strong>Tech stack:</strong> Java, SQLite, SWT, XML processing.</p>
         <ul>
           <li>Add, edit, delete, and search Buddhist terms</li>
@@ -177,7 +169,7 @@
         <ul>
           <li>Public: demos, features, architecture summaries</li>
           <li>Private: full implementation and proprietary assets</li>
-          <li>Contact available for follow-up</li>
+          <li>Contact available for recruiter follow-up</li>
         </ul>
       </article>
     </section>
@@ -187,6 +179,7 @@
       <p><strong>Name:</strong> Tashi Rabten</p>
       <p><strong>Email:</strong> <a href="mailto:Tashi.Rabten.Programming@gmail.com">Tashi.Rabten.Programming@gmail.com</a></p>
       <p><strong>GitHub:</strong> <a href="https://github.com/TashiRabten" target="_blank" rel="noopener noreferrer">github.com/TashiRabten</a></p>
+      <p class="small muted">For GitHub Pages deployment, use branch <code>main</code> and folder <code>/ (root)</code>.</p>
     </section>
   </main>
 </body>
