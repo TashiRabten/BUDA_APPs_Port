@@ -5,200 +5,215 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BUDA Apps Portfolio</title>
   <style>
-    :root{
-      --bg:#0b1020;
-      --panel:#121933;
-      --panel2:#1a2345;
-      --text:#edf2ff;
-      --muted:#b9c3e6;
-      --accent:#7aa2ff;
-      --accent2:#9ec1ff;
-      --border:#2a376d;
-      --chip:#202b56;
-      --shadow: 0 10px 30px rgba(0,0,0,.25);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:linear-gradient(180deg,var(--bg),#0f1730);
-      color:var(--text);
-      line-height:1.5;
-    }
-    a{color:var(--accent2);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:1100px;margin:0 auto;padding:32px 20px 60px}
-    header{
-      padding:28px;
-      background:linear-gradient(180deg,var(--panel),var(--panel2));
-      border:1px solid var(--border);
-      border-radius:18px;
-      box-shadow:var(--shadow);
-    }
-    h1{margin:0 0 10px;font-size:2.2rem}
-    .subtitle{color:var(--muted);margin:0 0 12px}
-    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-    .chip{
-      background:var(--chip);
-      border:1px solid var(--border);
-      padding:8px 12px;
-      border-radius:999px;
-      color:var(--muted);
-      font-size:.95rem;
-    }
-    .section-title{
-      margin:34px 0 14px;
-      font-size:1.5rem;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:18px;
-    }
-    .card{
-      background:linear-gradient(180deg,var(--panel),#111a36);
-      border:1px solid var(--border);
-      border-radius:18px;
-      padding:20px;
-      box-shadow:var(--shadow);
-    }
-    .card h3{margin-top:0;margin-bottom:8px}
-    .muted{color:var(--muted)}
-    .thumb{
-      width:100%;
-      aspect-ratio:16/9;
-      border-radius:12px;
-      background:#0a0f22;
-      border:1px dashed #4157a7;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:var(--muted);
-      margin:12px 0 14px;
-      text-align:center;
-      padding:14px;
+    :root {
+      --bg: #7f9fbe;
+      --panel: #f4f0df;
+      --panel-2: #e8e2cf;
+      --text: #2d3440;
+      --muted: #5a6b7f;
+      --accent: #2f7fb5;
+      --border: #c59a3f;
+      --shadow: 0 12px 24px rgba(33, 52, 73, 0.18);
     }
 
-    .screenshot{
-      width:100%;
-      border-radius:12px;
-      border:1px solid #4157a7;
-      margin:12px 0 14px;
-      display:block;
-      box-shadow:var(--shadow);
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, var(--bg), #dce5ef);
+      color: var(--text);
+      line-height: 1.55;
     }
-    ul{padding-left:20px}
-    .actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:14px;
+
+    a { color: var(--accent); }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
     }
-    .btn{
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:10px;
-      border:1px solid var(--border);
-      background:#1a2752;
-      color:var(--text);
-      font-weight:bold;
+
+    .hero,
+    .card,
+    .contact {
+      background: linear-gradient(180deg, var(--panel), var(--panel-2));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
     }
-    .btn.secondary{
-      background:#111936;
-      color:var(--muted);
+
+    .hero {
+      padding: 26px;
+      margin-bottom: 26px;
     }
-    footer{
-      margin-top:34px;
-      padding:22px;
-      background:rgba(18,25,51,.7);
-      border:1px solid var(--border);
-      border-radius:18px;
+
+    h1 { margin: 0 0 10px; }
+    h2 { margin: 0 0 14px; }
+    h3 { margin-top: 0; }
+
+    .subtitle,
+    .muted { color: var(--muted); }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
     }
-    code{
-      background:#0d1430;
-      padding:2px 6px;
-      border-radius:6px;
-      border:1px solid #24376c;
+
+    .chip {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      background: rgba(47, 127, 181, 0.12);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .card { padding: 18px; }
+
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin: 12px 0 14px;
+      background: #d8d8d8;
+    }
+
+    .video-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    ul { padding-left: 20px; }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      padding: 9px 12px;
+      font-weight: bold;
+      color: var(--text);
+      background: #3f7fb1;
+    }
+
+    .contact {
+      padding: 22px;
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
+  <main class="container">
+    <section class="hero">
       <h1>BUDA Apps Portfolio</h1>
       <p class="subtitle">
-        Private-source application portfolio for recruiter review. Public demos, feature walkthroughs, screenshots, and project summaries are available below.
+        Public portfolio page highlighting BUDA applications through project summaries, feature lists, and demo videos.
       </p>
       <p class="muted">
-        Source code is maintained in private repositories due to proprietary and copyright considerations.
+        Source code is intentionally private due to proprietary and copyright considerations.
       </p>
       <div class="chips">
-        <span class="chip">Private repos</span>
-        <span class="chip">Recruiter-friendly demos</span>
-        <span class="chip">Feature walkthrough videos</span>
-        <span class="chip">Screenshots & tech stack</span>
+        <span class="chip">Private repositories</span>
+        <span class="chip">Public demos</span>
+        <span class="chip">Feature overviews</span>
+        <span class="chip">Project highlights</span>
       </div>
-    </header>
+    </section>
 
-    <h2 class="section-title">Projects</h2>
-    <div class="grid">
-      <section class="card">
+    <h2>Projects</h2>
+    <section class="grid">
+      <article class="card">
         <h3>TradutorBUDA</h3>
-        <p class="muted">Java-based Tibetan translation and text-processing application focused on Buddhist terminology workflows. It combines dictionary lookup, tokenization, transliteration, ranking/model services, and optional OCR-related utilities.</p>
-        <a href="assets/tradutorbuda-screenshot.png" target="_blank" rel="noopener noreferrer"><img class="screenshot" src="assets/tradutorbuda-screenshot.png" alt="TradutorBUDA screenshot" /></a>
-        <p><strong>Tech stack:</strong> Java 17, Maven, SQLite, ONNX Runtime, tokenizers, R/Rserve, OCR utilities</p>
-        <ul>
-          <li>Tibetan term lookup and processing</li>
-          <li>Word-breaking and Tibetan text utilities</li>
-          <li>Optional OCR-related tools and assets</li>
-        </ul>
-        <div class="actions">
-          <a class="btn" href="https://youtu.be/klurDn2lfZw" target="_blank" rel="noopener noreferrer">Watch demo</a>
-          <a class="btn secondary" href="https://github.com/TashiRabten" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+        <p class="muted">
+          Java-based Tibetan translation and text-processing application focused on Buddhist terminology workflows.
+        </p>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/klurDn2lfZw"
+            title="TradutorBUDA demo video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
         </div>
-      </section>
+        <p><strong>Tech stack:</strong> Java 17, Maven, SQLite, ONNX Runtime, tokenizers, R/Rserve, OCR utilities.</p>
+        <ul>
+          <li>Tibetan term lookup and processing workflows</li>
+          <li>Word-breaking and Tibetan text utilities</li>
+          <li>Model/ranking and OCR-related optional integrations</li>
+        </ul>
+        <div class="buttons">
+          <a class="btn" href="https://youtu.be/klurDn2lfZw" target="_blank" rel="noopener noreferrer">Watch demo</a>
+          <a class="btn" href="https://github.com/TashiRabten" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+        </div>
+      </article>
 
-      <section class="card">
-        <h3>GlossarioBUDA - Simplified Version</h3>
-        <p class="muted">Simplified version of GlossarioBUDA containing the core glossary management functionality without the experimental Namsel OCR integration.</p>
-        <a href="assets/glossariobuda-screenshot.png" target="_blank" rel="noopener noreferrer"><img class="screenshot" src="assets/glossariobuda-screenshot.png" alt="GlossarioBUDA screenshot" /></a>
-        <p><strong>Tech stack:</strong> Java, SQLite, SWT, XML processing</p>
+      <article class="card">
+        <h3>GlossarioBUDA (Simplified)</h3>
+        <p class="muted">
+          Simplified glossary application retaining the core term management features without experimental OCR integration.
+        </p>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/UUHd_YkNNaI"
+            title="GlossarioBUDA demo video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p><strong>Tech stack:</strong> Java, SQLite, SWT, XML processing.</p>
         <ul>
           <li>Add, edit, delete, and search Buddhist terms</li>
-          <li>Supports Tibetan, Sanskrit, Pali, English, and Portuguese</li>
-          <li>XML import, WhatsApp-friendly export, and compact always-on-top view</li>
+          <li>Supports Tibetan, Sanskrit, Pali, English, Portuguese</li>
+          <li>XML import, WhatsApp-friendly export, always-on-top quick view</li>
         </ul>
-        <div class="actions">
+        <div class="buttons">
           <a class="btn" href="https://youtu.be/UUHd_YkNNaI" target="_blank" rel="noopener noreferrer">Watch demo</a>
-          <a class="btn secondary" href="https://github.com/TashiRabten" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+          <a class="btn" href="https://github.com/TashiRabten" target="_blank" rel="noopener noreferrer">GitHub profile</a>
         </div>
-      </section>
+      </article>
 
-      <section class="card">
+      <article class="card">
         <h3>Private Source Policy</h3>
-        <p class="muted">These applications are demonstrated publicly through videos, screenshots, and project summaries. The source code remains in private repositories due to proprietary and copyright considerations.</p>
-        <div class="thumb">You can add another project screenshot or a portfolio banner here.</div>
-        <p><strong>Available publicly:</strong> Demo videos, feature overviews, screenshots, and technology summaries</p>
+        <p class="muted">
+          The software is demonstrated publicly via videos and summaries while full source repositories remain private.
+        </p>
         <ul>
-          <li>Recruiter-friendly project showcase</li>
-          <li>Private repositories remain inaccessible to the public</li>
-          <li>Contact available for follow-up questions</li>
+          <li>Public: demos, features, architecture summaries</li>
+          <li>Private: full implementation and proprietary assets</li>
+          <li>Contact available for follow-up</li>
         </ul>
-        <div class="actions">
-          <a class="btn" href="mailto:Tashi.Rabten.Programming@gmail.com?subject=BUDA%20Apps%20Portfolio%20Inquiry" target="_blank" rel="noopener noreferrer">Contact me</a>
-          <a class="btn secondary" href="https://github.com/TashiRabten" target="_blank" rel="noopener noreferrer">GitHub profile</a>
-        </div>
-      </section>
-    </div>
+      </article>
+    </section>
 
-    <h2 class="section-title">Contact</h2>
-    <footer>
+    <section class="contact">
+      <h2>Contact</h2>
       <p><strong>Name:</strong> Tashi Rabten</p>
       <p><strong>Email:</strong> <a href="mailto:Tashi.Rabten.Programming@gmail.com">Tashi.Rabten.Programming@gmail.com</a></p>
-      <p><strong>Contact me:</strong> <a href="mailto:Tashi.Rabten.Programming@gmail.com?subject=BUDA%20Apps%20Portfolio%20Inquiry">Email Tashi about these apps</a></p>
       <p><strong>GitHub:</strong> <a href="https://github.com/TashiRabten" target="_blank" rel="noopener noreferrer">github.com/TashiRabten</a></p>
-      <p class="muted">Replace the placeholders before publishing. For video, an unlisted YouTube link is usually the easiest option for recruiters.</p>
-    </footer>
-  </div>
+    </section>
+  </main>
 </body>
 </html>
