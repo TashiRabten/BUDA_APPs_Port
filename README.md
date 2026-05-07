@@ -1,4 +1,4 @@
-# BUDA_APPs_Port
+[BUDA APPs Portfolio](https://TashiRabten.github.io/BUDA_APPs_Port/)
 
 Public portfolio repository for showcasing private-source applications to recruiters.
 
@@ -50,16 +50,5 @@ This is a simplified version of GlossarioBUDA that contains only the core glossa
 - Email: Tashi.Rabten.Programming@gmail.com
 - GitHub: https://github.com/TashiRabten/
 
-## GitHub Pages
 
-After pushing this repo to GitHub:
-- Go to **Settings**
-- Open **Pages**
-- Under **Build and deployment**, choose:
-  - **Source:** Deploy from a branch
-  - **Branch:** `main`
-  - **Folder:** `/ (root)`
 
-Your site URL should then be:
-
-`https://TashiRabten.github.io/BUDA_APPs_Port/`
