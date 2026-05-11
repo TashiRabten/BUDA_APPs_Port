@@ -203,15 +203,6 @@
           and optional OCR-related utilities.
         </p>
 
-        <a href="assets/tradutorbuda-screenshot.png"
-           target="_blank"
-           rel="noopener noreferrer">
-          <img
-            class="screenshot"
-            src="assets/tradutorbuda-screenshot.png"
-            alt="TradutorBUDA screenshot" />
-        </a>
-
         <div class="video-wrap">
           <iframe
             src="https://www.youtube.com/embed/6blrTYdL17w"
@@ -223,9 +214,9 @@
         </div>
 
         <p>
-          <strong>Tech stack:</strong>
-          Java 17, Maven, SQLite, ONNX Runtime, tokenizers,
-          R/Rserve, OCR utilities
+          <strong>Tech:</strong>
+          Java 21, Maven, SQLite, ONNX Runtime, tokenizers,
+          Transformer (NllB, mBert), OCR utilities (CNN Model, NumPy, etc...)
         </p>
 
         <ul>
@@ -271,8 +262,8 @@
         </div>
 
         <p>
-          <strong>Tech stack:</strong>
-          Java, SQLite, SWT, XML processing
+          <strong>Tech:</strong>
+          Java 21, SQLite, SWT, XML processing, SupaBase Real-Time Sync.
         </p>
 
         <ul>
@@ -297,6 +288,58 @@
           </a>
         </div>
       </article>
+
+
+      <!-- Tibetan OCR CNN Project -->
+      <article class="card">
+        <h3>Tibetan OCR — CNN & Transformer Research</h3>
+
+        <p class="muted">
+          Deep learning research project comparing lightweight CNN and
+          CNN+Transformer hybrid architectures for Tibetan character OCR.
+          Focused on replacing hand-crafted OCR pipelines with learned
+          convolutional and attention-based feature extraction.
+        </p>
+
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/UMSwbuFfDLk"
+            title="Tibetan OCR CNN presentation"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <p>
+          <strong>Tech:</strong>
+          PyTorch, CNNs, Transformers, ONNX, INT8 Quantization,
+          Gradio, Hugging Face Spaces, Mixed Precision Training
+        </p>
+
+        <ul>
+          <li>95.52% validation accuracy on 1,020 Tibetan character classes</li>
+          <li>Lightweight CNN and CNN+Transformer hybrid comparison</li>
+          <li>Interactive deployment using Hugging Face Spaces</li>
+        </ul>
+
+        <div class="buttons">
+          <a class="btn"
+             href="https://youtu.be/UMSwbuFfDLk"
+             target="_blank"
+             rel="noopener noreferrer">
+            Watch presentation
+          </a>
+
+          <a class="btn"
+             href="https://huggingface.co/spaces/trabten/tibetan-ocr"
+             target="_blank"
+             rel="noopener noreferrer">
+            Open Hugging Face Space
+          </a>
+        </div>
+      </article>
+
 
       <!-- Policy -->
       <article class="card">
