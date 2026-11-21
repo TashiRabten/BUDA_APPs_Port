@@ -172,19 +172,19 @@
       <h1>BUDA Apps Portfolio</h1>
 
       <p class="subtitle">
-        Public portfolio page highlighting BUDA applications through project summaries,
-        feature lists, and demo videos.
+        This page shows the BUDA applications. For each application, the page gives
+        a short description and a list of functions. Most applications also have a video.
       </p>
 
       <p class="muted">
-        Source code is intentionally private due to proprietary and copyright considerations.
+        The source code is private because of copyright.
       </p>
 
       <div class="chips">
         <span class="chip">Private repositories</span>
-        <span class="chip">Public demos</span>
-        <span class="chip">Feature overviews</span>
-        <span class="chip">Project highlights</span>
+        <span class="chip">Public videos</span>
+        <span class="chip">Function lists</span>
+        <span class="chip">Short descriptions</span>
       </div>
     </section>
 
@@ -197,16 +197,14 @@
         <h3>TradutorBUDA</h3>
 
         <p class="muted">
-          Java-based Tibetan translation and text-processing application focused on
-          Buddhist terminology workflows. It combines dictionary lookup,
-          tokenization, transliteration, ranking/model services,
-          and optional OCR-related utilities.
+          TradutorBUDA is a Java application for the translation of Tibetan Buddhist texts.
+          It helps translators to find the correct Buddhist terms.
         </p>
 
         <div class="video-wrap">
           <iframe
             src="https://www.youtube.com/embed/_ULlCKEIytM"
-            title="TradutorBUDA demo video"
+            title="TradutorBUDA video"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
@@ -214,15 +212,16 @@
         </div>
 
         <p>
-          <strong>Tech:</strong>
+          <strong>Tech stack:</strong>
           Java 21, Maven, SQLite, ONNX Runtime, tokenizers,
-          Transformer (NllB, mBert), OCR utilities (CNN Model, NumPy, etc...)
+          NLLB and mBERT Transformer models, CNN OCR model, NumPy
         </p>
 
         <ul>
-          <li>Tibetan term lookup and processing workflows</li>
-          <li>Word-breaking and Tibetan text utilities</li>
-          <li>Model/ranking and OCR-related optional integrations</li>
+          <li>It finds Tibetan terms in the glossary and in dictionaries.</li>
+          <li>It separates Tibetan text into words and changes Tibetan script into Latin letters.</li>
+          <li>Machine learning models put the best results first.</li>
+          <li>It can read scanned pages with an OCR engine.</li>
         </ul>
 
         <div class="buttons">
@@ -230,7 +229,7 @@
              href="https://youtu.be/_ULlCKEIytM"
              target="_blank"
              rel="noopener noreferrer">
-            Watch demo
+            See the video
           </a>
 
           <a class="btn"
@@ -247,14 +246,15 @@
         <h3>GlossarioBUDA (Simplified)</h3>
 
         <p class="muted">
-          Simplified glossary application retaining the core term
-          management features without experimental OCR integration.
+          GlossarioBUDA is a glossary application for Buddhist terms.
+          This version has only the main glossary functions.
+          It does not contain the OCR integration of the full version.
         </p>
 
         <div class="video-wrap">
           <iframe
             src="https://www.youtube.com/embed/UUHd_YkNNaI"
-            title="GlossarioBUDA demo video"
+            title="GlossarioBUDA video"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
@@ -262,14 +262,15 @@
         </div>
 
         <p>
-          <strong>Tech:</strong>
-          Java 21, SQLite, SWT, XML processing, SupaBase Real-Time Sync.
+          <strong>Tech stack:</strong>
+          Java 21, SQLite, SWT, XML, Supabase real-time sync
         </p>
 
         <ul>
-          <li>Add, edit, delete, and search Buddhist terms</li>
-          <li>Supports Tibetan, Sanskrit, Pali, English, Portuguese</li>
-          <li>XML import, WhatsApp-friendly export, always-on-top quick view</li>
+          <li>You can add, edit, delete, and search for Buddhist terms.</li>
+          <li>It stores terms in Tibetan, Sanskrit, Pāli, English, and Portuguese.</li>
+          <li>It imports terms from XML files and exports them in a format for WhatsApp.</li>
+          <li>A small window stays on top of other windows, so you can see the terms at all times.</li>
         </ul>
 
         <div class="buttons">
@@ -277,7 +278,7 @@
              href="https://youtu.be/UUHd_YkNNaI"
              target="_blank"
              rel="noopener noreferrer">
-            Watch demo
+            See the video
           </a>
 
           <a class="btn"
@@ -292,29 +293,29 @@
 
       <!-- Tibetan OCR CNN Project -->
       <article class="card">
-        <h3>Tibetan OCR — CNN & Transformer Research</h3>
+        <h3>Tibetan OCR — CNN and Transformer Research</h3>
 
         <p class="muted">
-          Deep learning research project comparing lightweight CNN and
-          CNN+Transformer hybrid architectures for Tibetan character OCR.
-          Focused on replacing hand-crafted OCR pipelines with learned
-          convolutional and attention-based feature extraction.
+          This deep learning project compares two neural network architectures for the OCR
+          of Tibetan characters. One architecture is a small CNN. The other architecture is
+          a hybrid of a CNN and a Transformer. The purpose is to replace hand-crafted OCR steps
+          with features that convolution and attention layers learn from the data.
         </p>
 
         <p class="muted">
-          Delivered as <strong>namsel_buda</strong> — a full modernization of the
-          classic <a href="https://github.com/thubtenrigzin/namsel-ocr"
-          target="_blank" rel="noopener noreferrer">Namsel OCR</a> engine
-          (Python&nbsp;3.12, the CNN recognizer above, and safe pickle-free model
-          formats). It is the Tibetan OCR engine embedded in <strong>TradutorBUDA</strong>,
-          turning scanned pages into editable Unicode for dictionary lookup and
-          translation.
+          The result is <strong>namsel_buda</strong>, a new version of the original
+          <a href="https://github.com/thubtenrigzin/namsel-ocr"
+          target="_blank" rel="noopener noreferrer">Namsel OCR</a> engine.
+          It uses Python&nbsp;3.12, the CNN recognizer of this project, and safe model
+          formats that do not use pickle. <strong>TradutorBUDA</strong> uses namsel_buda
+          as its Tibetan OCR engine. The engine changes scanned pages into Unicode text.
+          You can then edit the text, find its terms in the dictionary, and translate it.
         </p>
 
         <div class="video-wrap">
           <iframe
             src="https://www.youtube.com/embed/UMSwbuFfDLk"
-            title="Tibetan OCR CNN presentation"
+            title="Tibetan OCR presentation"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
@@ -322,18 +323,16 @@
         </div>
 
         <p>
-          <strong>Tech:</strong>
-          PyTorch, CNNs, Transformers, ONNX, INT8 Quantization,
-          Gradio, Hugging Face Spaces, Mixed Precision Training
+          <strong>Tech stack:</strong>
+          PyTorch, CNN, Transformer, ONNX, INT8 quantization,
+          mixed-precision training, Gradio, Hugging Face Spaces
         </p>
 
         <ul>
-          <li>95.52% validation accuracy on 1,020 Tibetan character classes</li>
-          <li>Lightweight CNN and CNN+Transformer hybrid comparison</li>
-          <li>Interactive deployment using Hugging Face Spaces</li>
-          <li>Shipped as <strong>namsel_buda</strong> — a modernized fork of the
-              Namsel OCR engine (Python&nbsp;3.12, CNN recognizer, pickle-free
-              data-only model formats)</li>
+          <li>The validation accuracy is 95.52% on 1,020 classes of Tibetan characters.</li>
+          <li>The project compares a small CNN with a hybrid of a CNN and a Transformer.</li>
+          <li>You can test the model on Hugging Face Spaces.</li>
+          <li>The OCR engine is available as <strong>namsel_buda</strong>, a fork of Namsel OCR.</li>
         </ul>
 
         <div class="buttons">
@@ -341,14 +340,14 @@
              href="https://youtu.be/UMSwbuFfDLk"
              target="_blank"
              rel="noopener noreferrer">
-            Watch presentation
+            See the presentation
           </a>
 
           <a class="btn"
              href="https://huggingface.co/spaces/trabten/tibetan-ocr"
              target="_blank"
              rel="noopener noreferrer">
-            Open Hugging Face Space
+            Open the Hugging Face Space
           </a>
 
           <a class="btn"
@@ -361,19 +360,81 @@
       </article>
 
 
+      <!-- SuiteBUDA multi-cloud backup -->
+      <article class="card">
+        <h3>SuiteBUDA — Multi-Cloud Backup</h3>
+
+        <p class="muted">
+          SuiteBUDA has the functions that all BUDA applications use.
+          Its data protection layer backs up the files of the applications to cloud
+          services and to other disks. The layer does not contain a cloud library.
+          It runs the rclone program with fixed commands.
+        </p>
+
+        <p class="muted">
+          The idea for this layer comes from
+          <a href="https://github.com/jorgejch/curate-d"
+          target="_blank" rel="noopener noreferrer">curate-d</a>,
+          an open-source multi-cloud file organizer by jorgejch.
+          The layer uses the same safety rule as curate-d.
+          This rule is “copy, verify, then register”.
+        </p>
+
+        <p>
+          <strong>Tech stack:</strong>
+          Java, rclone, rclone crypt, SHA-256, pCloud, Google Drive,
+          OneDrive, Amazon S3
+        </p>
+
+        <ul>
+          <li>The layer uses rclone to send copies to pCloud, Google Drive, OneDrive,
+              Amazon S3, and other cloud services. It can also use another disk or a NAS.</li>
+          <li>The layer records a copy only after it reads the copy back from the service
+              and gets the same SHA-256 hash.</li>
+          <li>The layer stores the content of each file only one time, under its SHA-256 hash.
+              A file in many versions uses only one copy at each service.</li>
+          <li>The layer copies an SQLite database only when no application writes to it.</li>
+          <li>Each backup records a version. You can restore a version into a new folder.
+              The restore does not overwrite the files of the applications.</li>
+          <li>The layer can read all copies back and repair damaged copies from good copies.
+              The layer never deletes files at a service.</li>
+          <li>With an rclone crypt remote, the copies stay encrypted at the cloud service.</li>
+          <li>The layer can also release disk space. It removes a local file that did not
+              change for a specified number of days, but only after it reads each copy back.
+              An index lets you put the file back.</li>
+        </ul>
+
+        <div class="buttons">
+          <a class="btn"
+             href="https://github.com/jorgejch/curate-d"
+             target="_blank"
+             rel="noopener noreferrer">
+            curate-d on GitHub
+          </a>
+
+          <a class="btn"
+             href="https://github.com/TashiRabten"
+             target="_blank"
+             rel="noopener noreferrer">
+            GitHub profile
+          </a>
+        </div>
+      </article>
+
+
       <!-- Policy -->
       <article class="card">
         <h3>Private Source Policy</h3>
 
         <p class="muted">
-          The software is demonstrated publicly via videos and summaries
-          while full source repositories remain private.
+          This page shows the software with videos and short descriptions.
+          The full source code stays in private repositories.
         </p>
 
         <ul>
-          <li>Public: demos, features, architecture summaries</li>
-          <li>Private: full implementation and proprietary assets</li>
-          <li>Contact available for follow-up</li>
+          <li>The videos, the function lists, and the architecture descriptions are public.</li>
+          <li>The full source code and the copyrighted files are private.</li>
+          <li>For more information, send an email to the address below.</li>
         </ul>
       </article>
 
